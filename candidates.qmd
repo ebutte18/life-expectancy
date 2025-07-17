@@ -14,6 +14,7 @@ library(tidyverse)
 library(primer.data)
 library(tidymodels)
 library(broom)
+library(marginaleffects)
 ```
 $$
 \text{logit}(\Pr(\text{lived\_after} = 1)) = \beta_0 + \beta_1 \cdot \text{age} + \beta_2 \cdot \text{party}_{\text{Democrat}} + \beta_3 \cdot \text{state\_income}
@@ -29,4 +30,8 @@ $$
 
 
 
-Political candidates' health are highly maligned due to travel schedules and human stress. A data source examines how long candidates live after being elected. A potential weakness in this model is the risk that behaviors have changed so much since the 1800s so the model can be inaccurate. 
+
+
+
+
+Political candidates' health are highly maligned due to travel schedules and human stress. A data source examines how long candidates live after being elected. A potential weakness in this model is the risk that behaviors have changed so much since the 1800s so the model can be inaccurate. The structure of the model attempts to predict how long a governor will live after being elected. The quantity of interest is the difference in years between a candidate who worked out and one who did not prior to being elected. 
